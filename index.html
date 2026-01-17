@@ -1,111 +1,558 @@
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FVNEL – Web Design & AI Automation</title>
+  <title>Steps</title>
   <meta name="description" content="FVNEL builds modern websites and AI automations for growing brands.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?
+family=Roboto:ital,wght@0,400&
+family=Montserrat:ital,wght@0,600&
+display=swap" rel="stylesheet">
 </head>
+
+<script>
+  const heartButtons = document.querySelectorAll(".heart-btn");
+
+  heartButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      btn.classList.toggle("liked");
+
+      const icon = btn.querySelector(".heart-icon");
+      icon.textContent = btn.classList.contains("liked") ? "♥" : "♡";
+    });
+  });
+</script>
+
 <body>
+
   <!-- Site-wide header -->
   <header>
-    <div class="logo">
-      <a href="/">FVNEL</a>
-    </div>
+    <div class="navbar-cont" id="top">
 
-    <!-- Main navigation for the site -->
-    <nav aria-label="Main navigation">
-      <ul>
-        <li><a href="#hero">Home</a></li>
-        <li><a href="#services">Services</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#about">About</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+      <!-- Logo -->
+      <div class="navbar-item2">
+        <a href="#top">
+          <img src="steps assets/steps3 1.png" alt="Website Logo" class="logoiamge">
+        </a>
+      </div>
+
+      <!-- Main navigation -->
+      <nav aria-label="Main navigation">
+        <ul class="navlist">
+          <li><a href="#hero">Features</a></li>
+          <li><a href="#products">Products</a></li>
+          <li><a href="#reviews">Reviews</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ul>
+      </nav>
+
+    </div>
   </header>
+
 
   <!-- Main content of this page -->
   <main>
     <!-- HERO SECTION -->
     <section id="hero" aria-labelledby="hero-heading">
-      <h1 id="hero-heading">We build websites that think for you.</h1>
-      <p>FVNEL designs conversion-focused websites and automates your workflows with AI.</p>
-      <a href="#contact">Book a free call</a>
+      <div class="flexcontainer-1">
+     <div class="flex-item-1">
+        <h1 id="hero-heading">Steps HyperMove</h1>
+        <h2 id="hero-subheading">Built for Movement. Made for Daily Comfort.</h2>
+        <p>Breathable design, responsive cushioning, and lightweight structure perfect for workouts, walking, and everyday wear.</p>
+        <a class="btn-primary" href="#contact">Shop Now</a>
+      </div>
+
+      
+      <div class="flex item 3"><img src="./steps assets/5ea1f0d52736523fd43f90aedd15c260 2.png" alt="Steps HyperMove Shoes">
+      </div>
+    </div>
     </section>
 
-    <!-- SERVICES SECTION -->
-    <section id="services" aria-labelledby="services-heading">
-      <h2 id="services-heading">Services</h2>
+    <!-- Features  SECTION -->
+   <section aria-labelledby="features-heading">
+      <h2 id="features-heading">Features</h2>
 
-      <article>
-        <h3>Web Design & Development</h3>
-        <p>Responsive, modern, and fast websites that match your brand.</p>
-      </article>
+      <article class="feature-item1"> 
 
-      <article>
-        <h3>AI Automation</h3>
-        <p>Automate lead generation, client onboarding, and repetitive tasks.</p>
-      </article>
-
-      <article>
-        <h3>Brand & UX Strategy</h3>
-        <p>Clear structure, messaging, and experience that keep users engaged.</p>
-      </article>
-    </section>
-
-    <!-- PROJECTS / CASE STUDIES -->
-    <section id="projects" aria-labelledby="projects-heading">
-      <h2 id="projects-heading">Projects</h2>
-
-      <article>
-        <h3>E-commerce Automation for XYZ Store</h3>
-        <p>Increased conversions by 30% with a new landing page + AI email flows.</p>
-      </article>
-
-      <article>
-        <h3>Portfolio Site for a Creative Agency</h3>
-        <p>Redesigned their website for better storytelling and mobile usability.</p>
-      </article>
-    </section>
-
-    <!-- ABOUT SECTION -->
-    <section id="about" aria-labelledby="about-heading">
-      <h2 id="about-heading">About FVNEL</h2>
-      <p>We are a web & AI studio focused on helping brands work smarter, not harder.</p>
-    </section>
-
-    <!-- CONTACT SECTION -->
-    <section id="contact" aria-labelledby="contact-heading">
-      <h2 id="contact-heading">Contact</h2>
-      <p>Ready to build something? Tell us about your project.</p>
-
-      <form>
-        <div>
-          <label for="name">Name</label>
-          <input id="name" name="name" type="text" required>
+        <div class="feature-item1-image">
+          <img src="./steps assets/dc7e01ac77725f0d2cd1917a8f7d495f 1.png" alt="Lightweight Cushioning Icon" class="feature-item1-image"> 
         </div>
-
-        <div>
-          <label for="email">Email</label>
-          <input id="email" name="email" type="email" required>
+        
+        <div class="feature-item1-content">
+        <h3>Lightweight Cushioning</h3>
+        <p>Soft, shock-absorbing midsole that reduces impact and keeps every step comfortable — whether walking, training, or moving all day.</p>
         </div>
+        
+      </article>
 
+      <article>
+        <h3>Breathable Upper</h3>
+        <p>Ventilated mesh structure keeps your feet cool and dry, preventing heat build-up during movement.
+          </p>
+          <div>
+            <img src="./steps assets/c459e71d96e1a7d4dbe11140c471984a 1.png" alt="Breathable Upper Icon">
+          </div>
+      </article>
+
+      <article>
+        
         <div>
-          <label for="message">Project details</label>
-          <textarea id="message" name="message" rows="5"></textarea>
+          <img src="./steps assets/4646294dbad6c02e3a010e4e8e4ccf29 1.png" alt="Ergonomic Support Icon" class="feturesitemsimge3">
         </div>
+        <div class="feturesitem3">
+        <h3>Ergonomic Support</h3>
+        <p>Designed to align with natural foot motion, providing balanced stability and comfort for long-term wear.</p>
+      </div>
+      </article>
 
-        <button type="submit">Send</button>
-      </form>
     </section>
+
+ 
+<!-- PRODUCTS SECTION -->
+<section id="products"
+  class="products-section"
+  aria-labelledby="products-heading">
+
+  <h2 id="products-heading" class="section-title">Products</h2>
+
+  <div class="products-grid">
+
+    <!-- Card 1 -->
+    <div class="product-card mint">
+
+      <div class="card-top">
+        <button class="heart-btn" aria-label="Add to favorites">
+          <span class="heart-icon">♡</span>
+        </button>
+
+        <img src="./steps assets/dc7e01ac77725f0d2cd1917a8f7d495f 1 (1).png"
+             class="product-img"
+             alt="Steps Elevate Ice White Mint">
+      </div>
+
+      <h3 class="product-title">Steps Elevate — Ice White / Mint</h3>
+
+      <div class="tags">
+        <span class="tag">EU 42</span>
+        <span class="tag">Ice White / Mint</span>
+      </div>
+
+      <p class="product-desc">
+        Lightweight cushioning, breathable knit design, and soft interior support —
+        built for everyday comfort with a clean modern look.
+      </p>
+
+      <div class="card-footer">
+        <span class="price">₦130k</span>
+        <button class="btn1">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- Card 2 -->
+    <div class="product-card navy">
+
+      <div class="card-top">
+        <button class="heart-btn" aria-label="Add to favorites">
+          <span class="heart-icon">♡</span>
+        </button>
+
+        <img src="./steps assets/Running Gear for Runners_ Nike UK 1 (1).png"
+             class="product-img"
+             alt="Steps Elevate Deep Navy Royal Blue">
+      </div>
+
+      <h3 class="product-title">Steps Elevate — Deep Navy / Royal Blue</h3>
+
+      <div class="tags">
+        <span class="tag">EU 42</span>
+        <span class="tag">Navy / Royal Blue</span>
+      </div>
+
+      <p class="product-desc">
+        Ergonomic support with responsive cushioning and durable traction —
+        designed for movement, training, and active daily wear.
+      </p>
+
+      <div class="card-footer">
+        <span class="price">₦145k</span>
+        <button class="btn2">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+    <div class="product-card coral">
+
+      <div class="card-top">
+        <button class="heart-btn" aria-label="Add to favorites">
+          <span class="heart-icon">♡</span>
+        </button>
+
+        <img src="./steps assets/7bffee138973b9cbaa31b0c99bf93ee8 1.png"
+             class="product-img"
+             alt="Steps Elevate Coral Pink Edition">
+      </div>
+
+      <h3 class="product-title">Steps Elevate — Coral Pink Edition</h3>
+
+      <div class="tags">
+        <span class="tag">EU 42</span>
+        <span class="tag">Coral Pink</span>
+      </div>
+
+      <p class="product-desc">
+        Soft cushioned midsole, breathable mesh comfort, and lightweight flexibility —
+        made for effortless all-day wear.
+      </p>
+
+      <div class="card-footer">
+        <span class="price">₦155k</span>
+        <button class="btn3">Shop Now</button>
+      </div>
+    </div>
+
+    <!-- Card 4 -->
+    <div class="product-card neon">
+
+      <div class="card-top">
+        <button class="heart-btn" aria-label="Add to favorites">
+          <span class="heart-icon">♡</span>
+        </button>
+
+        <img src="./steps assets/7f2de87cba690e26fdc1857037acf824 1.png"
+             class="product-img"
+             alt="Steps Elevate Midnight Black Neon Pulse">
+      </div>
+
+      <h3 class="product-title">Steps Elevate — Midnight Black / Neon Pulse</h3>
+
+      <div class="tags">
+        <span class="tag">EU 42</span>
+        <span class="tag">Midnight Black</span>
+      </div>
+
+      <p class="product-desc">
+        Lightweight knit design with premium cushioning, anti-slip traction, and bold
+        modern style — engineered for confident movement day and night.
+      </p>
+
+      <div class="card-footer">
+        <span class="price">₦168k</span>
+        <button class="btn4">Shop Now</button>
+      </div>
+    </div>
+
+  </div>
+</section>
+```
+
+
+   <!-- REVIEWS SECTION -->
+<section id="reviews" class="reviews-section" aria-labelledby="reviews-heading">
+
+  <h2 id="reviews-heading" class="section-title reviews-pill">Reviews</h2>
+  <p class="section-subtitle reviews-subtitle">we care about our customers experience too</p>
+
+  <!-- OUTER WRAPPER (hides overflow) -->
+  <div class="reviews-wrapper">
+
+    <!-- MOVING TRACK -->
+    <div class="reviews-carousel">
+
+      <!-- Review Card 1 -->
+      <div class="review-card">
+        <img src="./steps assets/Frame 19.png" alt="Jeremiah" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Jeremiah .O.</h3>
+        <p class="review-role">Web developer</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          I wear Steps Elevate almost every day. The cushioning is super comfortable and my feet
+          don’t get tired even after long walks.
+        </p>
+      </div>
+
+      <!-- Review Card 2 -->
+      <div class="review-card">
+        <img src="./steps assets/photo_2026-01-03_16-53-25 1.png" alt="Daniel Okafor" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Daniel Okafor</h3>
+        <p class="review-role">Fitness Enthusiast</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          These shoes are light, breathable, and stylish. I love that I can wear them to work and still
+          feel comfortable all day.
+        </p>
+      </div>
+
+      <!-- Review Card 3 -->
+      <div class="review-card">
+        <img src="./steps assets/photo_2026-01-03_16-53-20 1.png" alt="Sarah Benson" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Sarah Benson</h3>
+        <p class="review-role">Office Worker</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          The ergonomic support is amazing. No heel pain, no strain — just smooth movement and great traction.
+        </p>
+      </div>
+
+      <!-- Review Card 4 -->
+      <div class="review-card">
+        <img src="./steps assets/photo_2026-01-03_16-53-15 1 (1).png" alt="Michael Adams" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Michael Adams</h3>
+        <p class="review-role">Runner / Trainer</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          I spend long hours on my feet, and Steps Elevate has been a lifesaver.
+          The cushioning feels soft but supportive, and the quality is solid.
+        </p>
+      </div>
+
+      <!-- DUPLICATES for seamless infinite loop -->
+      <!-- Review Card 1 -->
+      <div class="review-card">
+        <img src="./steps assets/Frame 19.png" alt="Jeremiah" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Jeremiah .O.</h3>
+        <p class="review-role">Web developer</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          I wear Steps Elevate almost every day. The cushioning is super comfortable and my feet
+          don’t get tired even after long walks.
+        </p>
+      </div>
+
+      <!-- Review Card 2 -->
+      <div class="review-card">
+        <img src="./steps assets/photo_2026-01-03_16-53-25 1.png" alt="Daniel Okafor" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Daniel Okafor</h3>
+        <p class="review-role">Fitness Enthusiast</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          These shoes are light, breathable, and stylish. I love that I can wear them to work and still
+          feel comfortable all day.
+        </p>
+      </div>
+
+      <!-- Review Card 3 -->
+      <div class="review-card">
+        <img src="./steps assets/photo_2026-01-03_16-53-20 1.png" alt="Sarah Benson" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Sarah Benson</h3>
+        <p class="review-role">Office Worker</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          The ergonomic support is amazing. No heel pain, no strain — just smooth movement and great traction.
+        </p>
+      </div>
+
+      <!-- Review Card 4 -->
+      <div class="review-card">
+        <img src="./steps assets/photo_2026-01-03_16-53-15 1 (1).png" alt="Michael Adams" class="review-img">
+
+        <div class="review-line"></div>
+
+        <h3 class="review-name">Michael Adams</h3>
+        <p class="review-role">Runner / Trainer</p>
+
+        <p class="review-stars">★★★★★</p>
+
+        <p class="review-text">
+          I spend long hours on my feet, and Steps Elevate has been a lifesaver.
+          The cushioning feels soft but supportive, and the quality is solid.
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- PARTNERS SECTION -->
+<section class="partners-section">
+
+  <h2 class="partners-title">Steps Partners & Collaborators Subtitle</h2>
+
+  <div class="partners-logos">
+    <img src="./steps assets/images 1.png" alt="Gymshark">
+    <img src="./steps assets/download (2) 1.png" alt="Red Bull">
+    <img src="./steps assets/images 2.png" alt="Nike">
+    <img src="./steps assets/velacore-logo 1.png" alt="Velacore">
+  </div>
+
+</section>
+
+
+    <section id="contact"
+         class="contact-section"
+         aria-labelledby="contact-heading">
+
+  <!-- Left side: Title + Description + Form -->
+  <div class="contact-left">
+
+    <h2>Contact us</h2>
+
+    <p>
+      We’re committed to providing fast, reliable assistance and ensuring every
+      customer has a smooth and confident shopping experience. Reach out to us
+      with any questions about orders, sizing, delivery, or product details.
+    </p>
+
+    <!-- Contact Form -->
+    <form>
+
+      <!-- Name Field -->
+      <label>Name</label>
+      <input type="text" placeholder="John doe">
+
+      <!-- Email Field -->
+      <label>Email Address</label>
+      <input type="email" placeholder="Email">
+
+      <!-- Message Field -->
+      <label>Message</label>
+      <textarea placeholder="Message"></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit" class="btn-primary">Submit</button>
+
+
+    </form>
+  </div>
+
+
+
+  <!-- Right side: Contact Info Cards -->
+  <div class="contact-right">
+
+    <!-- Card 1: Address -->
+    <div class="contact-card">
+      <h3>Address</h3>
+      <p>Steps Headquarters, Victoria Island, Lagos<br>Nigeria</p>
+    </div>
+
+    <!-- Card 2: Phone -->
+    <div class="contact-card">
+      <h3>Contact</h3>
+      <p>Talk to us or inquire about orders<br>+234 803 555 9172</p>
+    </div>
+
+    <!-- Card 3: Email -->
+    <div class="contact-card">
+      <h3>Email</h3>
+      <p>We respond within 24 hours<br>support@stepsbrand.com</p>
+    </div>
+
+    <!-- Card 4: Working Hours -->
+    <div class="contact-card">
+      <h3>Working Hours</h3>
+      <p>
+        Mon–Sat: 9am — 7pm<br>
+        Sunday: 11am — 5pm
+      </p>
+    </div>
+
+  </div>
+</section>
+
   </main>
 
   <!-- SITE FOOTER -->
-  <footer>
-    <p>© 2025 FVNEL. All rights reserved.</p>
-  </footer>
-</body>
-</html>
+<footer class="footer" aria-label="Website footer">
+
+  <!-- Left Logo + Tagline -->
+  <div class="footer-brand">
+    <img src="steps assets/steps3 1.png" alt="Steps Logo" class="footer-logo">
+    <p class="footer-tagline">Comfort. Performance. Everyday Movement.</p>
+  </div>
+
+
+  <!-- Footer Navigation Columns -->
+  <div class="footer-columns">
+
+    <!-- About Column -->
+    <div class="footer-column">
+      <h3>About</h3>
+      <ul>
+        <li>About Us</li>
+        <li>Our Mission</li>
+        <li>Partners & Collaborations</li>
+        <li>Contact Support</li>
+      </ul>
+    </div>
+
+    <!-- Shop Column -->
+    <div class="footer-column">
+      <h3>Shop</h3>
+      <ul>
+        <li>Shop Variations</li>
+        <li>Size Guide</li>
+        <li>Delivery & Shipping</li>
+        <li>Returns & Exchange</li>
+      </ul>
+    </div>
+
+    <!-- Support Column -->
+    <div class="footer-column">
+      <h3>Support</h3>
+      <ul>
+        <li>Help & FAQ</li>
+        <li>Track Your Order</li>
+        <li>Warranty & Product Care</li>
+        <li>Customer Reviews</li>
+      </ul>
+    </div>
+
+    <!-- Contact Column -->
+    <div class="footer-column">
+      <h3>Contact</h3>
+      <ul>
+        <li>Email: support@stepsbrand.com</li>
+        <li>Phone: +234 803 555 9172</li>
+        <li>Lagos, Nigeria</li>
+      </ul>
+    </div>
+
+  </div>
+
+
+  <!-- Copyright Bar -->
+  <div class="footer-bottom">
+    <p>© 2026 Steps. All rights reserved</p>
+  </div>
+
+</footer>
