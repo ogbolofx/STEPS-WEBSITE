@@ -7,6 +7,18 @@
   box-sizing: border-box;
 }
 
+html, body{
+  width: 100%;
+  overflow-x: hidden;
+}
+
+img{
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+
 /* ================================
    ROOT DESIGN SYSTEM
 ================================ */
@@ -1215,4 +1227,230 @@ section[aria-labelledby="features-heading"] article:nth-of-type(3) {
   .footer-columns{
     grid-template-columns: 1fr !important;
   }
+}
+/* =========================
+   MOBILE FIXES
+========================= */
+@media (max-width: 768px) {
+
+  /* HERO SECTION */
+  .hero {
+    padding: 2.5rem 1.2rem;
+    text-align: left;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem; /* was too big */
+    line-height: 1.2;
+    margin-bottom: 1rem;
+  }
+
+  .hero h2 {
+    font-size: 1.4rem;
+    line-height: 1.4;
+    margin-bottom: 1rem;
+  }
+
+  .hero p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    max-width: 100%;
+  }
+
+  .hero .btn-primary {
+    margin-top: 1.2rem;
+  }
+}
+/* =========================
+   NAVBAR + HAMBURGER MENU
+========================= */
+
+.main-nav{
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 16px;
+  position: relative;
+}
+
+/* Desktop nav links */
+.navlist{
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  margin: 0;
+  padding: 0;
+}
+
+.navlist a{
+  text-decoration: none;
+  font-weight: 700;
+  color: #2a2a2a;
+  white-space: nowrap;
+}
+
+/* Hamburger button hidden on desktop */
+.nav-toggle{
+  display: none;
+  width: 46px;
+  height: 46px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.nav-toggle .bar{
+  width: 26px;
+  height: 3px;
+  background: #d04536;
+  border-radius: 999px;
+  transition: transform 0.25s ease, opacity 0.25s ease;
+}
+
+/* =========================
+   MOBILE MENU STYLE
+========================= */
+@media (max-width: 768px){
+
+  /* show hamburger */
+  .nav-toggle{
+    display: flex;
+  }
+
+  /* hide the normal nav links */
+  .navlist{
+    display: none;
+
+    position: absolute;
+    top: 60px;
+    right: 0;
+
+    width: 220px;
+    background: #e2e5e6;
+    border-radius: 14px;
+
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 14px;
+
+    padding: 18px;
+    box-shadow: 0 16px 40px rgba(0,0,0,0.18);
+  }
+
+  /* show menu when active */
+  .main-nav.active .navlist{
+    display: flex;
+  }
+
+  /* nav links inside mobile menu */
+  .navlist li{
+    width: 100%;
+  }
+
+  .navlist a{
+    display: block;
+    width: 100%;
+    padding: 10px 10px;
+    border-radius: 10px;
+    font-size: 15px;
+  }
+
+  .navlist a:hover{
+    background: rgba(208, 69, 54, 0.12);
+    color: #d04536;
+  }
+
+  /* hamburger turns into X */
+  .main-nav.active .nav-toggle .bar:nth-child(1){
+    transform: translateY(9px) rotate(45deg);
+  }
+
+  .main-nav.active .nav-toggle .bar:nth-child(2){
+    opacity: 0;
+  }
+
+  .main-nav.active .nav-toggle .bar:nth-child(3){
+    transform: translateY(-9px) rotate(-45deg);
+  }
+}
+/* =========================
+   FEATURES ITEM 3 (ERGONOMIC SUPPORT)
+========================= */
+
+/* Desktop layout (image left, text right) */
+.feturesitemsimge3{
+  width: 520px;
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.feturesitem3 h3{
+  font-size: 52px;
+  font-weight: 900;
+  color: #d04536;
+  margin: 0 0 12px;
+}
+
+.feturesitem3 p{
+  font-size: 16px;
+  line-height: 1.55;
+  color: #222;
+  max-width: 520px;
+  margin: 0;
+}
+
+/* Make the article align properly */
+#features article{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 50px;
+  padding: 60px 0;
+}
+
+/* =========================
+   MOBILE FIX (STACK)
+========================= */
+@media (max-width: 768px){
+
+  #features article{
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+    padding: 40px 0;
+  }
+
+  .feturesitemsimge3{
+    width: 320px;
+  }
+
+  .feturesitem3 h3{
+    font-size: 40px;
+    line-height: 1.1;
+  }
+
+  .feturesitem3 p{
+    font-size: 15px;
+    max-width: 100%;
+    padding: 0 10px;
+  }
+}
+.Feature-item2-content4{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+.Feature-item2-content{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
 }
